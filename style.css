@@ -24,6 +24,12 @@ html {
     transform: scale(0.98);
     transition: transform 0.5s;
   }
+
+  /* whenever fixed-nav class is on the body , we are increasing the size of our article */
+
+  .fixed-nav .site-wrap {
+    transform: scale(1);
+  }
   
   header {
     text-align: center;
@@ -49,7 +55,14 @@ html {
     position: relative;
     z-index: 1;
   }
-  
+
+/* Whenever fixed-nav class is on the body, we are making the navigation fixed at the top and adding some box-shadow to it */
+
+  .fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  } 
+
   nav ul {
     margin: 0;
     padding:0;
@@ -72,6 +85,12 @@ html {
     transition: all .5s;
     font-weight: 600;
     font-size: 30px;
+  }
+
+/* Whenever .fixed-nav class is on the body, we are showing the logo into the navigation */
+
+  .fixed-nav li.logo {
+    max-width: 500px;
   }
   
   li.logo a {
